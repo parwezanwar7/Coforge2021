@@ -12,7 +12,7 @@ import { Product } from '../product';
 export class ProductComponent implements OnInit {
 
   submitted = false;
-  prod: Product = new Product();  //create object in angular
+  prod: Product = new Product();
 
   // inject the depedency of service class here
 constructor(private demoservice1: Demoservice) { }
@@ -25,26 +25,10 @@ constructor(private demoservice1: Demoservice) { }
 
 
 save(){
-
-  this.demoservice1.getDetails(this.prod).subscribe(data => {
-    console.log(data)
-    this.employee = new Employee();
-    this.gotoList();
-  }, 
-  error => console.log(error));
-
-
-
+ console.log(' I am calling from Product controller');
+ this.demoservice1.getDetails();
 
 }
-
-
-
-onSubmit() {
-  this.submitted = true;   //flag
-  this.save();    
-}
-
 
 
 }
