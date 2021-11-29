@@ -1,0 +1,1 @@
+ALTER TABLE actor ADD middle_name VARCHAR(20) AFTER first_name;
